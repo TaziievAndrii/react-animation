@@ -1,0 +1,51 @@
+.header {
+  z-index: 2;
+}
+
+header {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials {
+  @include flex;
+  column-gap: 1rem;
+  justify-content: flex-end;
+
+  svg {
+    fill: $light;
+    width: 1.6rem;
+    height: 1.6rem;
+    transition: fill 0.25s ease;
+  }
+
+  &-item {
+    &:hover {
+      svg {
+        fill: $action;
+      }
+    }
+  }
+}
+
+.menu {
+  @include flex;
+  column-gap: 1.6rem;
+
+  &-item {
+    a {
+      color: $light;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: color 0.25s ease;
+
+      &:hover {
+          color: $action;
+      }
+    }
+  }
+}
