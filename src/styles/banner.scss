@@ -1,0 +1,14 @@
+.banner {
+  min-height: 54rem;
+  position: relative;
+  background-image: url('../images/banner.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center ;
+
+  &-video {
+    position: relative;
+    @include center;
+  }
+}
+

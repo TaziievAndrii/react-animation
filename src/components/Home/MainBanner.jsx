@@ -2,20 +2,21 @@ import React from 'react';
 
 import Section from "../Section/Section";
 
-import video from "../../images/video.mp4"
+import gif from "../../images/text.gif"
 
 const MainBanner = () => (
     <Section>
         <div className="container">
             <h1 style={{fontSize: 0, lineHeight: 0}}>Evanescence</h1>
             <div className="banner">
-                <video className={`banner-video`} width={1000} height='auto' autoPlay loop muted>
-                    <source src={video} type="video/mp4"/>
-                </video>
-            </div>
+                <picture className={`banner-video`} style={{width: '100%', height: 'auto'}}>
+                <source src={gif} type="image/gif"/>
+                <img src={gif}/>
+            </picture>
         </div>
-    </Section>
-);
+    </div>
+</Section>
+)
 
 
 export default MainBanner;
