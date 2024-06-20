@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import {motion, useScroll, useTransform} from 'framer-motion';
 
 const Section = ({children,...rest}) => {
+
     const ref = useRef(null);
     const {scrollYProgress} = useScroll({
         threshold: ref,
@@ -10,7 +11,7 @@ const Section = ({children,...rest}) => {
     const backgroundY = useTransform(scrollYProgress,[0,2],['0%','100%'])
 
     return (
-        <section {...rest} ref={ref} className="section">
+        <section {...rest} ref={ref} >
             <motion.div style={{y: backgroundY}}>
                 {children}
             </motion.div>

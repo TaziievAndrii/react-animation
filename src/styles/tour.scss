@@ -5,15 +5,25 @@
     margin-top: 2.1rem;
   }
 
+  &-banner {
+    position: relative;
+    padding-top: 3.2rem;
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
+
   &-item {
     @include flex;
     padding: 2.9rem 0;
     text-transform: uppercase;
     justify-content: space-between;
-    border-top: 1px solid rgba(217,217,217,0.5);
+    border-top: 1px solid rgba(217, 217, 217, 0.5);
 
     &:last-child {
-      border-bottom: 1px solid rgba(217,217,217,0.5);
+      border-bottom: 1px solid rgba(217, 217, 217, 0.5);
     }
 
     &__date {
