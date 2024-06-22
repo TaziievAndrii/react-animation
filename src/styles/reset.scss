@@ -102,5 +102,12 @@ ul, li {
   display: block;
   margin: 0 auto;
   text-align: center;
+  margin-top: 4rem;
+  cursor: pointer;
+  transition: color 0.25s;
+
+  &:hover {
+    color: $action
+  }
 }
 

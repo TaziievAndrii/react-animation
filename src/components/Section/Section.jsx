@@ -8,10 +8,11 @@ const Section = ({children,...rest}) => {
         threshold: ref,
         offset: ['start start' , 'end start ']
     })
-    const backgroundY = useTransform(scrollYProgress,[0,2],['0%','100%'])
+
+    const backgroundY = useTransform(scrollYProgress, [0, 2], ["0%", "100%"]);
 
     return (
-        <section {...rest} ref={ref} >
+        <section {...rest} ref={ref}  style={{height: '100%'}}>
             <motion.div style={{y: backgroundY}}>
                 {children}
             </motion.div>
