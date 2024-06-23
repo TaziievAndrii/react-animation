@@ -1,5 +1,5 @@
 .tracks {
-  padding: 1.6rem 0;
+  padding: 1.6rem 0 3.2rem 0;
   margin-top: 2rem;
 
   &-section {
@@ -15,15 +15,62 @@
   gap: 1.6rem;
   position: relative;
   grid-template-columns: 30rem 1fr;
-  grid-template-areas: 'image date title .';
+  grid-template-areas:
+    "image date"
+    "title .";
+  max-width: 100%;
 
   &-item {
     &:nth-child(2n) {
       .track {
         margin-left: auto;
         grid-template-columns:  1fr 30rem;
-        grid-template-areas: 'date image  .  title';
+        grid-template-areas:
+          "date image"
+          ". title";
       }
     }
+  }
+
+  &-image {
+    grid-area: image;
+    width: 100%;
+    height: 30rem;
+    position: relative;
+
+    img {
+      object-fit: cover;
+      @include center;
+
+    }
+
+    .icon {
+      &-pause {
+        width: 10rem;
+        height: 10rem;
+        fill: $light;
+        @include center;
+      }
+    }
+  }
+
+  &-date {
+    color: $grey;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    grid-area: date;
+
+  }
+
+  &-title {
+    color: $light;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 125%;
+    position: absolute;
+    grid-area: title;
+    top: 100%;
+    z-index: 2;
   }
 }
