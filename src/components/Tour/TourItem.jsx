@@ -2,6 +2,7 @@ import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 import Icon from "../Icon/Icon";
+import {getLocaleDateString} from "../../utils/common";
 
 
 const TourItem = ({
@@ -24,11 +25,7 @@ const TourItem = ({
             >
                 <div className="tour-item__info">
                     <div className="tour-item__date">
-                        {new Date(date).toLocaleDateString('en-En', {
-                            month: 'numeric',
-                            day: 'numeric',
-                            year: 'numeric'
-                        })}
+                        {getLocaleDateString(date,{})}
                     </div>
                     <p className="tour-item__place">
                         {place}

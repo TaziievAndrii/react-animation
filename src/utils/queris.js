@@ -24,8 +24,12 @@ export const trackItemCollectionQuery = `
             }
             date
             title
-            link
-            cover
+            link {
+                url
+            }
+            cover {
+                url
+            }
         }
     }
 }

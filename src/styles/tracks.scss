@@ -1,0 +1,29 @@
+.tracks {
+  padding: 1.6rem 0;
+  margin-top: 2rem;
+
+  &-section {
+    padding: 5rem 0;
+  }
+}
+
+.track {
+  cursor: pointer;
+  text-transform: uppercase;
+  width: max-content;
+  display: grid;
+  gap: 1.6rem;
+  position: relative;
+  grid-template-columns: 30rem 1fr;
+  grid-template-areas: 'image date title .';
+
+  &-item {
+    &:nth-child(2n) {
+      .track {
+        margin-left: auto;
+        grid-template-columns:  1fr 30rem;
+        grid-template-areas: 'date image  .  title';
+      }
+    }
+  }
+}
