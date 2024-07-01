@@ -13,7 +13,7 @@ const Section = ({children,...rest}) => {
 
     return (
         <section {...rest} ref={ref}  style={{height: '100%'}}>
-            <motion.div style={{y: backgroundY}}>
+            <motion.div style={{y: backgroundY,display:"contents"}}>
                 {children}
             </motion.div>
         </section>
