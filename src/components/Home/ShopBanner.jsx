@@ -29,7 +29,7 @@ const ShopBanner = () => {
                             duration={3}
                             offset={0}
                         >
-                            <img src={logo} alt="Evanescenceshop"/>
+                            <img src={logo} alt="Evanescenceshop" className={`shop-logo`}/>
                         </ScrollAnimation>
                         <ScrollAnimation
                             className={`shop-banner__image`}
